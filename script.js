@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const geometry = new THREE.TorusKnotGeometry(13.5, 4.0, 150, 32); // Larger size and more segments
 
     // Create points material with larger size
-    const material = new THREE.PointsMaterial({ color: 0x264653, size: 0.2 }); // Larger dot size
+    const material = new THREE.PointsMaterial({ color: #002883, size: 0.2 }); // Larger dot size
     const points = new THREE.Points(geometry, material);
     scene.add(points);
 
