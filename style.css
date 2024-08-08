@@ -20,15 +20,27 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 100vh;
     overflow: hidden;
     user-select: none;
 }
 
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .container {
     text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
@@ -39,7 +51,6 @@ body {
     animation: fadeIn 3s forwards;
     text-transform: uppercase;
     margin-bottom: 50px;
-    display: inline-block;
 }
 
 @keyframes fadeIn {
@@ -48,9 +59,6 @@ body {
 }
 
 .login-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     background: none;
     border: 1px solid var(--button-border-color);
     padding: 10px 20px;
@@ -71,8 +79,8 @@ body {
     display: none;
     position: absolute;
     top: 50%;
-    left: calc(100% + 20px); /* Position to the right of the title */
-    transform: translateY(-50%);
+    left: 100%; /* Position to the right of the title */
+    transform: translate(20px, -50%);
     background-color: var(--popup-bg-color);
     padding: 20px;
     border-radius: 8px;
