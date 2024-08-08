@@ -2,11 +2,11 @@
     --background-color: #ffe6d2;
     --text-color: #002883;
     --input-text-color: #002883;
-    --input-border-color: lightgrey;
-    --button-border-color: #ff463e;
+    --input-border-color: #002883;
+    --button-border-color: #002883;
     --button-hover-bg-color: #ff463e;
     --button-hover-text-color: white;
-    --popup-bg-color: #ff463e;
+    --popup-bg-color: #8ed8e9;
     --popup-shadow-color: rgba(0, 0, 0, 0.5);
     --close-popup-color: #002883;
     --close-popup-border-color: #002883;
@@ -76,7 +76,7 @@ body {
 
 .subtitle {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     overflow: hidden;
     white-space: nowrap;
     border-right: none; /* Initially no cursor */
