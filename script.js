@@ -12,7 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
         loginPopup.style.display = 'none';
     });
 
-    loginSubmit.addEventListener('click', () => {
+    loginSubmit.addEventListener('click', handleLogin);
+
+    window.addEventListener('click', (event) => {
+        if (event.target === loginPopup) {
+            loginPopup.style.display = 'none';
+        }
+    });
+
+    window.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' && loginPopup.style.display === 'flex') {
+            handleLogin();
+        }
+    });
+
+    function handleLogin() {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         if (username === 'settanta7' && password === '1234') {
@@ -22,11 +36,5 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Incorrect username or password');
         }
         loginPopup.style.display = 'none';
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target === loginPopup) {
-            loginPopup.style.display = 'none';
-        }
-    });
+    }
 });
