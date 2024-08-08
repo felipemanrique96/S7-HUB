@@ -25,10 +25,22 @@ body {
     height: 100vh;
     overflow: hidden;
     user-select: none;
+    position: relative;
 }
 
 .container {
     text-align: center;
+    position: absolute;
+    z-index: 10;
+}
+
+#three-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .title-container {
@@ -45,7 +57,7 @@ body {
     text-transform: uppercase;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 2.5s steps(30, end), grow-and-shrink 2s 2.5s forwards;
+    animation: typing 1.5s steps(30, end), grow-and-shrink 1.5s 1.5s forwards;
     border-right: none; /* Remove the cursor line */
     margin-bottom: 1vh;
     margin-top: 2vh;
@@ -69,8 +81,8 @@ body {
     white-space: nowrap;
     border-right: none; /* Initially no cursor */
     width: 0;
-    animation: typing-subtitle 4s steps(40, end) forwards;
-    animation-delay: 4.5s; /* Delay for the h1 animation to complete */
+    animation: typing-subtitle 2.5s steps(40, end) forwards;
+    animation-delay: 3s; /* Delay for the h1 animation to complete */
     margin-top: 1rem;
 }
 
@@ -81,6 +93,7 @@ body {
 }
 
 .login-button {
+    opacity: 0; /* Initially hidden */
     position: absolute;
     top: 20px;
     right: 20px;
@@ -90,9 +103,14 @@ body {
     color: var(--text-color);
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    transition: opacity 1s; /* Transition for fading in */
     border-radius: 20px;
     text-transform: uppercase;
+    z-index: 10;
+}
+
+.login-button.show {
+    opacity: 1; /* Show with fade-in effect */
 }
 
 .login-button:hover {
