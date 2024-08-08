@@ -3,8 +3,9 @@
     --text-color: #002883;
     --input-text-color: #002883;
     --input-border-color: #002883;
+    --input-focus-border-color: #002883; /* Add a variable for input focus border color */
     --button-border-color: #002883;
-    --button-hover-bg-color: #ff463e;
+    --button-hover-bg-color: #002883; /* Changed color */
     --button-hover-text-color: white;
     --popup-bg-color: #8ed8e9;
     --popup-shadow-color: rgba(0, 0, 0, 0.5);
@@ -146,9 +147,14 @@ body {
     width: 200px;
     border: 1px solid var(--input-border-color);
     border-radius: 4px;
-    text-transform: uppercase;
+    text-transform: lowercase; /* Lowercase input */
     color: var(--input-text-color);
     background: none;
+}
+
+.login-popup input:focus {
+    border-color: var(--input-focus-border-color); /* Keep border blue when focused */
+    outline: none; /* Remove default outline */
 }
 
 .login-popup #password {
@@ -189,4 +195,9 @@ body {
 
 .close-popup:hover {
     color: var(--close-popup-hover-color);
+}
+
+::placeholder {
+    color: var(--input-text-color); /* Placeholder text color */
+    opacity: 1; /* Fully opaque placeholder text */
 }
