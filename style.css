@@ -37,6 +37,7 @@ body {
     opacity: 0;
     animation: fadeIn 3s forwards;
     text-transform: uppercase;
+    margin-bottom: 50px; /* Add margin to avoid overlap with login popup */
 }
 
 @keyframes fadeIn {
