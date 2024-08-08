@@ -48,6 +48,7 @@ body {
     animation: typing 2.5s steps(30, end), grow-and-shrink 2s 2.5s forwards;
     border-right: none; /* Remove the cursor line */
     margin-bottom: 1vh;
+    marign-top: 2vh;
 }
 
 @keyframes typing {
