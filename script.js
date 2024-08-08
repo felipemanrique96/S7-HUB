@@ -15,7 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     loginSubmit.addEventListener('click', () => {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
-        alert(`Username: ${username}\nPassword: ${password}`);
+        if (username === 'settanta7' && password === '1234') {
+            window.location.href = './dashboard.html';
+        } else {
+            alert('Incorrect username or password');
+        }
         loginPopup.style.display = 'none';
     });
 
