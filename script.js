@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     loginSubmit.addEventListener('click', () => {
-        const username = document.getElementById('username').value;
+        const username = document.getElementById('username').value.toLowerCase(); // Convert to lowercase
         const password = document.getElementById('password').value;
         if (username === 'settanta7' && password === '1234') {
             localStorage.setItem('username', username);
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create an organic form using TorusKnotGeometry, further increased size
     const geometry = new THREE.TorusKnotGeometry(13.5, 4.0, 150, 32); // Larger size and more segments
 
-    // Create points material with larger size
-    const material = new THREE.PointsMaterial({ color: 0x264653, size: 0.2 }); // Larger dot size
+    // Create points material with reduced size and increased transparency
+    const material = new THREE.PointsMaterial({ color: 0x002883, size: 0.1, transparent: true, opacity: 0.2 }); // Reduced dot size and more transparency
     const points = new THREE.Points(geometry, material);
     scene.add(points);
 
