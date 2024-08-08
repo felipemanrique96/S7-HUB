@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
         if (username === 'settanta7' && password === '1234') {
             localStorage.setItem('username', username);
-            window.location.href = './dashboard.html';
+            window.location.href = 'https://felipemanrique96.github.io/S7-HUB-DASHBOARD/';
         } else {
             alert('Incorrect username or password');
         }
