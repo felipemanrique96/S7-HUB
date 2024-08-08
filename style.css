@@ -31,14 +31,23 @@ body {
     text-align: center;
 }
 
+.title-container {
+    margin-bottom: 1rem;
+}
+
+.subtitle-container {
+    margin-top: 1rem;
+}
+
 .main-title {
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 300;
     text-transform: uppercase;
     overflow: hidden;
     white-space: nowrap;
     animation: typing 2.5s steps(30, end), grow-and-shrink 2s 2.5s forwards;
     border-right: none; /* Remove the cursor line */
+    margin-bottom: 1vh;
 }
 
 @keyframes typing {
@@ -52,8 +61,22 @@ body {
     100% { transform: scale(1); }
 }
 
-.main-title.grow {
-    animation: grow-and-shrink 2s forwards;
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: none; /* Initially no cursor */
+    width: 0;
+    animation: typing-subtitle 4s steps(40, end) forwards;
+    animation-delay: 4.5s; /* Delay for the h1 animation to complete */
+    margin-top: 1rem;
+}
+
+@keyframes typing-subtitle {
+    0% { width: 0; border-right: none; } /* No cursor at start */
+    1% { border-right: 2px solid var(--text-color); } /* Cursor appears */
+    100% { width: 100%; }
 }
 
 .login-button {
