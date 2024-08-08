@@ -1,0 +1,138 @@
+:root {
+    --background-color: black;
+    --text-color: white;
+    --input-text-color: grey;
+    --input-border-color: lightgrey;
+    --button-border-color: white;
+    --button-hover-bg-color: white;
+    --button-hover-text-color: black;
+    --popup-bg-color: #333;
+    --popup-shadow-color: rgba(0, 0, 0, 0.5);
+    --close-popup-color: grey;
+    --close-popup-border-color: grey;
+    --close-popup-hover-color: darkgrey;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.main-title {
+    font-size: 5rem;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    text-transform: uppercase;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.login-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: 1px solid var(--button-border-color);
+    padding: 10px 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.login-button:hover {
+    background-color: var(--button-hover-bg-color);
+    color: var(--button-hover-text-color);
+}
+
+.login-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--popup-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px var(--popup-shadow-color);
+    z-index: 1000;
+}
+
+.login-popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-popup h2 {
+    font-weight: 300;
+}
+
+.login-popup input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    text-transform: uppercase;
+    color: var(--input-text-color);
+    background: none;
+}
+
+.login-popup #password {
+    margin-bottom: 20px;
+}
+
+.login-popup button {
+    background: none;
+    border: 1px solid var(--button-border-color);
+    padding: 10px 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.login-popup button:hover {
+    background-color: var(--button-hover-bg-color);
+    color: var(--button-hover-text-color);
+}
+
+.close-popup {
+    align-self: flex-end;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--close-popup-color);
+    transition: color 0.3s;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1.5px solid var(--close-popup-border-color);
+    line-height: 0;
+}
+
+.close-popup:hover {
+    color: var(--close-popup-hover-color);
+}
