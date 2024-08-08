@@ -20,45 +20,46 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     overflow: hidden;
     user-select: none;
 }
 
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
 .container {
     text-align: center;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 }
 
 .main-title {
     font-size: 6rem;
     font-weight: 300;
-    opacity: 0;
-    animation: fadeIn 3s forwards;
     text-transform: uppercase;
-    margin-bottom: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2.5s steps(30, end), grow-and-shrink 2s 2.5s forwards;
+    border-right: none; /* Remove the cursor line */
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes grow-and-shrink {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.main-title.grow {
+    animation: grow-and-shrink 2s forwards;
 }
 
 .login-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     background: none;
     border: 1px solid var(--button-border-color);
     padding: 10px 20px;
@@ -78,9 +79,8 @@ body {
 .login-popup {
     display: none;
     position: absolute;
-    top: 50%;
-    left: 100%; /* Position to the right of the title */
-    transform: translate(20px, -50%);
+    top: 80px; /* Adjust this value to increase the gap */
+    right: 20px;
     background-color: var(--popup-bg-color);
     padding: 20px;
     border-radius: 8px;
