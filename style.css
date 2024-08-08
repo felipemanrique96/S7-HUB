@@ -29,6 +29,9 @@ body {
 
 .container {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-title {
@@ -37,7 +40,8 @@ body {
     opacity: 0;
     animation: fadeIn 3s forwards;
     text-transform: uppercase;
-    margin-bottom: 50px; /* Add margin to avoid overlap with login popup */
+    margin-bottom: 50px;
+    position: relative;
 }
 
 @keyframes fadeIn {
@@ -67,10 +71,10 @@ body {
 
 .login-popup {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 100%;
+    transform: translate(20px, -50%);
     background-color: var(--popup-bg-color);
     padding: 20px;
     border-radius: 8px;
@@ -95,7 +99,7 @@ body {
     border: 1px solid var(--input-border-color);
     border-radius: 4px;
     text-transform: uppercase;
-    color: var(--input-text-color);
+    color: var (--input-text-color);
     background: none;
 }
 
@@ -105,7 +109,7 @@ body {
 
 .login-popup button {
     background: none;
-    border: 1px solid var(--button-border-color);
+    border: 1px solid var (--button-border-color);
     padding: 10px 20px;
     color: var(--text-color);
     cursor: pointer;
