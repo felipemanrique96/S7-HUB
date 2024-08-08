@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginSubmit = document.getElementById('loginSubmit');
 
     loginButton.addEventListener('click', () => {
-        loginPopup.style.display = 'flex';
+        loginPopup.style.display = 'block';
     });
 
     closePopup.addEventListener('click', () => {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' && loginPopup.style.display === 'flex') {
+        if (event.key === 'Enter' && loginPopup.style.display === 'block') {
             handleLogin();
         }
     });
