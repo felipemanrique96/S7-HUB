@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         if (username === 'settanta7' && password === '1234') {
+            localStorage.setItem('username', username);
             window.location.href = './dashboard.html';
         } else {
             alert('Incorrect username or password');
