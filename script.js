@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const geometry = new THREE.TorusKnotGeometry(13.5, 4.0, 150, 32); // Larger size and more segments
 
     // Create points material with reduced size and increased transparency
-    const material = new THREE.PointsMaterial({ color: 0x002883, size: 0.1, transparent: true, opacity: 0.2 }); // Reduced dot size and more transparency
+    const material = new THREE.PointsMaterial({ color: 0x002883, size: 0.1, transparent: true, opacity: 0.3 }); // Reduced dot size and more transparency
     const points = new THREE.Points(geometry, material);
     scene.add(points);
 
