@@ -39,6 +39,7 @@ body {
     animation: fadeIn 3s forwards;
     text-transform: uppercase;
     margin-bottom: 50px;
+    display: inline-block;
 }
 
 @keyframes fadeIn {
@@ -70,7 +71,7 @@ body {
     display: none;
     position: absolute;
     top: 50%;
-    left: calc(100% + 20px);
+    left: calc(100% + 20px); /* Position to the right of the title */
     transform: translateY(-50%);
     background-color: var(--popup-bg-color);
     padding: 20px;
