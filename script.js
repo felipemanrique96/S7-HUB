@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
     renderer.setClearColor(0x000000, 0); // Black background with transparency
 
     // Create an organic form using TorusKnotGeometry, further increased size
-    const geometry = new THREE.TorusKnotGeometry(13.5, 4.0, 150, 32); // Larger size and more segments
+    const geometry = new THREE.TorusKnotGeometry(13.5, 4.0, 150, 25); // Larger size and more segments
 
     // Create points material with larger size
-    const material = new THREE.PointsMaterial({ color: #002883, size: 0.2 }); // Larger dot size
+    const material = new THREE.PointsMaterial({ color: #002883, size: 0.1 }); // Larger dot size
     const points = new THREE.Points(geometry, material);
     scene.add(points);
 
