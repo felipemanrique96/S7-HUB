@@ -1,15 +1,15 @@
 :root {
-    --background-color: black;
-    --text-color: white;
-    --input-text-color: grey;
+    --background-color: #ffe6d2;
+    --text-color: #002883;
+    --input-text-color: #002883;
     --input-border-color: lightgrey;
-    --button-border-color: white;
-    --button-hover-bg-color: white;
-    --button-hover-text-color: black;
-    --popup-bg-color: #333;
+    --button-border-color: #ff463e;
+    --button-hover-bg-color: #ff463e;
+    --button-hover-text-color: white;
+    --popup-bg-color: #ff463e;
     --popup-shadow-color: rgba(0, 0, 0, 0.5);
-    --close-popup-color: grey;
-    --close-popup-border-color: grey;
+    --close-popup-color: #002883;
+    --close-popup-border-color: #002883;
     --close-popup-hover-color: darkgrey;
 }
 
